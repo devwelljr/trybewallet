@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { actionEmail } from '../actions';
+import '../styles/login.css';
 
 class Login extends React.Component {
   constructor(props) {
@@ -42,8 +43,9 @@ class Login extends React.Component {
     const { email, password, valid } = this.state;
 
     return (
-      <div>
-        <form>
+      <div id="divLogin">
+        <h1 className="fs-2 font-monospace">TRYBEWALLET</h1>
+        <form id="formLogin">
           <input
             data-testid="email-input"
             type="email"
@@ -66,6 +68,7 @@ class Login extends React.Component {
             <button
               type="button"
               id="butaoSubmit"
+              className="btn btn-dark"
               disabled={ valid }
               onClick={ this.onSubmit }
             >

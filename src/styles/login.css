@@ -1,0 +1,27 @@
+/* stylelint-disable */
+
+#divLogin {
+  align-items: center;
+  background-color: rgba(16, 158, 16, 0.8);
+  border: black 1px solid;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: center;
+  margin: auto;
+  transform: translateY(200px);
+  width: 400px;
+}
+
+#divLogin h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+#formLogin {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}

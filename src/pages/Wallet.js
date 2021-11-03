@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import FormWallet from '../components/FormWallet';
 import fetchExpense from '../servises/fetchExpense';
 import TableExpend from '../components/TableExpend';
+import '../styles/wallet.css';
 
 class Wallet extends React.Component {
   constructor() {
@@ -55,16 +56,20 @@ class Wallet extends React.Component {
       total = expenses[0].exchangeRates[expenses[0].currency].ask * expenses[0].value;
     }
     if (expenses.length > 1) {
-      expenses.map((expense) => values.push(parseFloat(
-        expense.exchangeRates[expense.currency].ask * expense.value,
-      )));
+      expenses.map((expense) => values.push(
+        parseFloat(
+          expense.exchangeRates[expense.currency].ask * expense.value,
+        ),
+      ));
       total = values.reduce((vt, vc) => vt + vc);
     }
     return total.toFixed(2);
   }
 
   async fetchMoedas() {
-    const fetchMoedas = await fetch('https://economia.awesomeapi.com.br/json/all');
+    const fetchMoedas = await fetch(
+      'https://economia.awesomeapi.com.br/json/all',
+    );
     const json = await fetchMoedas.json();
     const moedasKeys = Object.keys(json);
     const moedas = moedasKeys.filter((moeda) => moeda !== 'USDT');
@@ -76,10 +81,16 @@ class Wallet extends React.Component {
     const { currency, moedas, value, description, tag, method } = this.state;
     return (
       <div>
-        <header>
-          <h3 data-testid="email-field">{ email }</h3>
-          <span data-testid="total-field">{ this.totalExpenses() }</span>
-          <h3 data-testid="header-currency-field">BRL</h3>
+        <header className="d-flex flex-row bd-highlight separate">
+          <h3 className="separate" data-testid="email-field">
+            {email}
+          </h3>
+          <h3 className="separate" data-testid="total-field">
+            {this.totalExpenses()}
+          </h3>
+          <h3 className="separate" data-testid="header-currency-field">
+            BRL
+          </h3>
         </header>
         <FormWallet
           moedas={ moedas }

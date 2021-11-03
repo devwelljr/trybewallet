@@ -37,6 +37,7 @@ function TableExpend(props) {
               <td>
                 <button
                   type="button"
+                  className="btn btn-dark"
                   onClick={ () => remove(id) }
                   data-testid="delete-btn"
                 >
