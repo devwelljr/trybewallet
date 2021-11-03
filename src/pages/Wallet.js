@@ -52,9 +52,11 @@ class Wallet extends React.Component {
     if (expenses.length === 0) {
       return total;
     }
+
     if (expenses.length === 1) {
       total = expenses[0].exchangeRates[expenses[0].currency].ask * expenses[0].value;
     }
+
     if (expenses.length > 1) {
       expenses.map((expense) => values.push(
         parseFloat(
