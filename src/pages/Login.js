@@ -64,7 +64,7 @@ class Login extends React.Component {
             value={ password }
             onChange={ this.handleChange }
           />
-          <Link to="/carteira">
+          <Link to="/trybewallet/carteira">
             <button
               type="button"
               id="butaoSubmit"
