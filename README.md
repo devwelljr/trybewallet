@@ -1,6 +1,6 @@
 # Project TRYBEWALLET!
 
-Uma apicação simples com CRUD, onde podem ser criados, adicionados, atualizados e removidos do catálago.
+Uma aplicação para controle financeiro com converção de moedas, com seus respectivos valores atualizados em tempo real usando a API <a href="https://docs.awesomeapi.com.br/api-de-moedas" >awesomeAPI</a>.
 
 ![project-demo](/trybewallet.png)
 
