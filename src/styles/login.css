@@ -1,7 +1,14 @@
 /* stylelint-disable */
 
-#divLogin {
+main {
   align-items: center;
+  display: flex;
+  min-height: 600px;
+  min-width: 100%;
+  justify-content: center;
+}
+
+#divLogin {
   background-color: rgba(16, 158, 16, 0.8);
   border: black 1px solid;
   display: flex;
@@ -9,13 +16,16 @@
   height: 50%;
   justify-content: center;
   margin: auto;
-  transform: translateY(200px);
+  animation: spin 1500ms linear;
   width: 400px;
 }
 
 #divLogin h1 {
   text-align: center;
   text-decoration: underline;
+  overflow: hidden;
+  transition-duration: 0.8s;
+  transition-property: transform;
 }
 
 #formLogin {
@@ -24,4 +34,21 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+}
+
+@keyframes spin {
+  rom {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }

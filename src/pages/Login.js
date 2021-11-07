@@ -43,40 +43,42 @@ class Login extends React.Component {
     const { email, password, valid } = this.state;
 
     return (
-      <div id="divLogin">
-        <h1 className="fs-2 font-monospace">TRYBEWALLET</h1>
-        <form id="formLogin">
-          <input
-            data-testid="email-input"
-            type="email"
-            placeholder="Seu Email aqui"
-            name="email"
-            value={ email }
-            onChange={ this.handleChange }
-          />
+      <main>
+        <div id="divLogin">
+          <h1 className="fs-2 font-monospace">TRYBEWALLET</h1>
+          <form id="formLogin">
+            <input
+              data-testid="email-input"
+              type="email"
+              placeholder="Seu E-mail aqui"
+              name="email"
+              value={ email }
+              onChange={ this.handleChange }
+            />
 
-          <input
-            data-testid="password-input"
-            type="password"
-            placeholder="Sua senha aqui"
-            name="password"
-            minLength="6"
-            value={ password }
-            onChange={ this.handleChange }
-          />
-          <Link to="/trybewallet/carteira">
-            <button
-              type="button"
-              id="butaoSubmit"
-              className="btn btn-dark"
-              disabled={ valid }
-              onClick={ this.onSubmit }
-            >
-              Entrar
-            </button>
-          </Link>
-        </form>
-      </div>
+            <input
+              data-testid="password-input"
+              type="password"
+              placeholder="Sua senha aqui"
+              name="password"
+              minLength="6"
+              value={ password }
+              onChange={ this.handleChange }
+            />
+            <Link to="/trybewallet/carteira">
+              <button
+                type="button"
+                id="butaoSubmit"
+                className="btn btn-dark"
+                disabled={ valid }
+                onClick={ this.onSubmit }
+              >
+                Entrar
+              </button>
+            </Link>
+          </form>
+        </div>
+      </main>
     );
   }
 }
